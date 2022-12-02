@@ -1,7 +1,7 @@
 package global
 
 import (
-	types2 "BugFind/model/types"
+	types2 "bugfind/model/types"
 )
 
 var (

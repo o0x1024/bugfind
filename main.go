@@ -1,10 +1,10 @@
 package main
 
 import (
-	core "BugFind/internal/agentCore"
-	"BugFind/internal/env"
-	"BugFind/internal/libs/Glog"
-	"BugFind/internal/taskCore"
+	core "bugfind/internal/agentCore"
+	"bugfind/internal/env"
+	"bugfind/internal/libs/Glog"
+	"bugfind/internal/taskCore"
 	"fmt"
 	"github.com/kataras/golog"
 	"log"

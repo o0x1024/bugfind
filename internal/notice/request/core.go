@@ -1,7 +1,7 @@
 package request
 
 import (
-	"BugFind/global"
+	"bugfind/global"
 	"log"
 	"net/http"
 	"strings"

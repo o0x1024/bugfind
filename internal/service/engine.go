@@ -1,11 +1,11 @@
 package service
 
 import (
-	"BugFind/global"
-	"BugFind/internal/handle"
-	"BugFind/internal/libs/Glog"
-	utils2 "BugFind/internal/utils"
-	"BugFind/model/request"
+	"bugfind/global"
+	"bugfind/internal/handle"
+	"bugfind/internal/libs/Glog"
+	utils2 "bugfind/internal/utils"
+	"bugfind/model/request"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"

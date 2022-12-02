@@ -1,8 +1,8 @@
 package fofa
 
 import (
-	"BugFind/global"
-	utils2 "BugFind/internal/utils"
+	"bugfind/global"
+	utils2 "bugfind/internal/utils"
 	"crypto/tls"
 	"encoding/base64"
 	"fmt"

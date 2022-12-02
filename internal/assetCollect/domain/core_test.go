@@ -1,7 +1,7 @@
 package domain
 
 import (
-	"BugFind/internal/libs/ksubdomain/core"
+	"bugfind/internal/libs/ksubdomain/core"
 	"log"
 	"strconv"
 	"testing"

@@ -1,11 +1,11 @@
 package domain
 
 import (
-	"BugFind/internal/handle"
-	"BugFind/internal/libs/Glog"
-	"BugFind/internal/libs/ksubdomain/core"
-	"BugFind/model/request"
-	"BugFind/model/response"
+	"bugfind/internal/handle"
+	"bugfind/internal/libs/Glog"
+	"bugfind/internal/libs/ksubdomain/core"
+	"bugfind/model/request"
+	"bugfind/model/response"
 	"bytes"
 	"context"
 	"github.com/projectdiscovery/subfinder/v2/pkg/passive"

@@ -1,11 +1,11 @@
 package assetCollect
 
 import (
-	"BugFind/global"
-	"BugFind/internal/db"
-	"BugFind/internal/notice/request"
-	utils2 "BugFind/internal/utils"
 	"bufio"
+	"bugfind/global"
+	"bugfind/internal/db"
+	"bugfind/internal/notice/request"
+	utils2 "bugfind/internal/utils"
 	"crypto/tls"
 	"encoding/json"
 	"io/ioutil"

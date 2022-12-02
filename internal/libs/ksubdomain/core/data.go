@@ -1,8 +1,8 @@
 package core
 
 import (
-	_ "BugFind/internal/libs/ksubdomain/statik"
 	"bufio"
+	_ "bugfind/internal/libs/ksubdomain/statik"
 	"github.com/rakyll/statik/fs"
 	"log"
 	"net"

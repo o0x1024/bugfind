@@ -1,10 +1,10 @@
 package notice
 
 import (
-	"BugFind/config"
-	"BugFind/global"
-	"BugFind/internal/notice/request"
-	types2 "BugFind/model/types"
+	"bugfind/config"
+	"bugfind/global"
+	"bugfind/internal/notice/request"
+	types2 "bugfind/model/types"
 	"fmt"
 	"log"
 	"net/http"

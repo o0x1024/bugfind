@@ -1,12 +1,12 @@
 package core
 
 import (
-	"BugFind/global"
-	"BugFind/internal/handle"
-	"BugFind/internal/libs/safe"
-	"BugFind/internal/service"
-	"BugFind/internal/utils"
-	"BugFind/model/request"
+	"bugfind/global"
+	"bugfind/internal/handle"
+	"bugfind/internal/libs/safe"
+	"bugfind/internal/service"
+	"bugfind/internal/utils"
+	"bugfind/model/request"
 	"encoding/json"
 	"fmt"
 

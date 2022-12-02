@@ -1,10 +1,10 @@
 package handle
 
 import (
-	"BugFind/global"
-	"BugFind/internal/libs/Glog"
-	"BugFind/model/request"
-	"BugFind/model/response"
+	"bugfind/global"
+	"bugfind/internal/libs/Glog"
+	"bugfind/model/request"
+	"bugfind/model/response"
 	"bytes"
 	"encoding/json"
 	"errors"

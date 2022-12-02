@@ -1,9 +1,9 @@
 package taskCore
 
 import (
-	"BugFind/global"
-	"BugFind/internal/assetCollect/domain"
-	"BugFind/model/response"
+	"bugfind/global"
+	"bugfind/internal/assetCollect/domain"
+	"bugfind/model/response"
 	"encoding/json"
 	"io"
 	"log"

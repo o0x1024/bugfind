@@ -1,7 +1,7 @@
 package env
 
 import (
-	"BugFind/internal/libs/Glog"
+	"bugfind/internal/libs/Glog"
 	"fmt"
 	"log"
 	"os/exec"

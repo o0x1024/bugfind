@@ -1,4 +1,4 @@
-module BugFind
+module bugfind
 
 go 1.17
 

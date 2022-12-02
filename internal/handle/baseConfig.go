@@ -1,7 +1,7 @@
 package handle
 
 import (
-	"BugFind/global"
+	"bugfind/global"
 	"encoding/json"
 	"github.com/parnurzeal/gorequest"
 )

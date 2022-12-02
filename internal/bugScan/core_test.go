@@ -1,10 +1,10 @@
 package bugScan
 
 import (
-	"BugFind/global"
-	"BugFind/internal/utils"
-	types2 "BugFind/model/types"
 	"bufio"
+	"bugfind/global"
+	"bugfind/internal/utils"
+	types2 "bugfind/model/types"
 	"fmt"
 	"io"
 	"log"

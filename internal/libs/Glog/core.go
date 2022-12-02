@@ -1,7 +1,7 @@
 package Glog
 
 import (
-	"BugFind/internal/utils"
+	"bugfind/internal/utils"
 	"io"
 	"log"
 	"os"

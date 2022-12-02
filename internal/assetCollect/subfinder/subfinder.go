@@ -1,10 +1,10 @@
 package subfinder
 
 import (
-	"BugFind/global"
-	"BugFind/internal/utils"
-	"BugFind/model/response"
 	"bufio"
+	"bugfind/global"
+	"bugfind/internal/utils"
+	"bugfind/model/response"
 	"log"
 	"os/exec"
 	"strings"
