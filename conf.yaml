@@ -1,0 +1,10 @@
+server_host: "42.193.253.66"
+server_port: 7788
+
+wechat: "71a8d6f3-f15a-4a43-a323-5e411ae3e9b9"
+v3token: "123123123123"
+
+
+#wkg_url: "http://42.193.253.66:7788"
+
+wkg_url: "http://127.0.0.1:7788"
