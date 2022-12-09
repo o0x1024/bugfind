@@ -3,3 +3,11 @@
 [ERROR]2022/09/21 18:08:16 core.go:73: exit status 1
 [ERROR]2022/09/21 18:09:34 core.go:73: exit status 1
 [ERROR]2022/09/21 18:10:11 core.go:73: exit status 1
+[ERROR]2022/12/09 16:06:14 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:06:24 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:06:29 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:06:30 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:21:48 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:23:08 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:23:36 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.
+[ERROR]2022/12/09 16:24:34 core.go:72: Post "http://42.193.253.66:7788/v3/import?token=123123123123": dial tcp 42.193.253.66:7788: connectex: No connection could be made because the target machine actively refused it.

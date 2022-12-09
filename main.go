@@ -2,7 +2,6 @@ package main
 
 import (
 	core "bugfind/internal/agentCore"
-	"bugfind/internal/env"
 	"bugfind/internal/libs/Glog"
 	"bugfind/internal/taskCore"
 	"fmt"
@@ -40,10 +39,10 @@ func main() {
 	t := time.Now()
 	Glog.InitLog()
 
-	//环境检查，工具是否安装好了
-	log.Println("--------env check.---------")
-	env.EnvCheck()
-	log.Println("--------env check done.-------")
+	////环境检查，工具是否安装好了
+	//log.Println("--------env check.---------")
+	//env.EnvCheck()
+	//log.Println("--------env check done.-------")
 	//agent注销启动
 	core.Start()
 	go taskCore.Run()

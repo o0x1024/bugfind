@@ -1,73 +1,41 @@
 package bugScan
 
 import (
-	"bufio"
-	"bugfind/global"
-	"bugfind/internal/utils"
-	types2 "bugfind/model/types"
+	"bytes"
 	"fmt"
+	"github.com/projectdiscovery/subfinder/v2/pkg/resolve"
+	"github.com/projectdiscovery/subfinder/v2/pkg/runner"
 	"io"
 	"log"
-	"os"
-	"os/exec"
 	"regexp"
 	"strings"
 	"testing"
 )
 
 func TestRunBugScan(t *testing.T) {
+	runnerInstance, err := runner.NewRunner(&runner.Options{
+		Threads:            10,                       // Thread controls the number of threads to use for active enumerations
+		Timeout:            30,                       // Timeout is the seconds to wait for sources to respond
+		MaxEnumerationTime: 10,                       // MaxEnumerationTime is the maximum amount of time in mins to wait for enumeration
+		Resolvers:          resolve.DefaultResolvers, // Use the default list of resolvers by marshaling it to the config
+		//ResultCallback: func(s *resolve.HostEntry) { // Callback function to execute for available host
+		//	log.Println(s.Host, s.Source)
+		//},
+		Silent: true,
+	})
 
-	log.Println("[*] start bug scan...")
-	cmd := exec.Command("nuclei", "-u", "https://rw.online.anaheim.cust66.lv.webproxy.ida.webank.com")
-
-	//StdoutPipe方法返回一个在命令Start后与命令标准输出关联的管道。Wait方法获知命令结束后会关闭这个管道，一般不需要显式的关闭该管道。
-	stdout, err := cmd.StdoutPipe()
+	buf := bytes.Buffer{}
+	err = runnerInstance.EnumerateSingleDomain("pingan.com", []io.Writer{&buf})
 	if err != nil {
-		fmt.Println("cmd.StdoutPipe: ", err)
-		return
+		log.Fatal(err)
 	}
-	cmd.Stderr = os.Stderr
-	//cmd.Dir = dir
-	err = cmd.Start()
+
+	data, err := io.ReadAll(&buf)
 	if err != nil {
-		return
+		log.Fatal(err)
 	}
-	//创建一个流来读取管道内内容，这里逻辑是通过一行一行的读取的
-	reader := bufio.NewReader(stdout)
-	//实时循环读取输出流中的一行内容
-	for {
-		data, err2 := reader.ReadString('\n')
-		if err2 != nil || io.EOF == err2 {
-			break
-		}
-		data = strings.Replace(data, "\u001B[36m", "", -1)
-		data = strings.Replace(data, "\u001B[1;92m", "", -1)
-		data = strings.Replace(data, "\u001B[92m", "", -1)
-		data = strings.Replace(data, "\u001B[94m", "", -1)
-		data = strings.Replace(data, "\u001B[34m", "", -1)
-		data = strings.Replace(data, "\u001B[33m", "", -1)
-		data = strings.Replace(data, "\u001B[0m", "", -1)
-		data = strings.Replace(data, "\u001B[38;5;208m", "", -1)
-
-		for _, v := range keyword {
-			reg := regexp.MustCompile(v)
-			if len(reg.FindAllStringSubmatch(data, -1)) > 0 {
-				//if strings.Contains(data, v) {
-				fmt.Println(data)
-				var alarm = types2.Alarm{}
-				alarm.Type = 0
-				alarm.Level = v
-				alarm.Detail = data
-				alarm.Timetamp = utils.GetCurTime()
-				//扫描出来的漏洞上报后台
-				global.Alarm <- alarm
-				//扫描出来的漏洞微信公众号通知
-			}
-		}
-	}
-	err = cmd.Wait()
-
-	log.Println("[*] bug scan done.")
+	domains := strings.Split(string(data), "\n")
+	log.Println("[+]  find ", len(domains), "assets by subfinder.")
 }
 
 func TestRunBugScans(t *testing.T) {

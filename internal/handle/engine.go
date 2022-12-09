@@ -14,6 +14,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"time"
 )
 
 /*
@@ -85,7 +86,7 @@ func ReportUpload(req request.UploadReq) {
 }
 
 func UploadResult(info *request.InputDataStruct) error {
-	clien := http.Client{}
+	clien := http.Client{Timeout: time.Second * 5}
 	url := global.WkgURL + "/v3/import?token=" + global.V3Token
 
 	body, err := json.Marshal(info)
